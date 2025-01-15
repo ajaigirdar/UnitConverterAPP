@@ -35,12 +35,10 @@ public class LengthUnit extends Unit{
     }
 
     private LengthType type;
-
     public LengthUnit(LengthType type, double value) {
         super(value);
         this.type = type;
     }
-
 
     @Override
     public double convertTo(Unit targetUnit) {
