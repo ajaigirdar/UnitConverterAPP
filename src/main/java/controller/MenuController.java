@@ -10,13 +10,13 @@ public class MenuController {
         boolean keepRunning = true;
 
         while (keepRunning) {
-            System.out.println("Welcome to Unit Converter App!\n");
-            System.out.println("Choose a conversion category:");
-            System.out.println("1. Length");
-            System.out.println("2. Temperature");
-            System.out.println("3. Weight");
-            System.out.println("4. Area");
-            System.out.println("5. Exit");
+            System.out.println("-[ Welcome to Unit Converter App ]-");
+            System.out.println("-- Choose a conversion category --");
+            System.out.println("1 - Length");
+            System.out.println("2 - Temperature");
+            System.out.println("3 - Weight");
+            System.out.println("4 - Area");
+            System.out.println("5 - Exit");
             System.out.print("Enter your choice: ");
 
             int choice = getValidInt(scanner);
