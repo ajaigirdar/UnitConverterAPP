@@ -1,4 +1,3 @@
-<bg color = white>
 # UnitConverterAPP
 
 ## Overview
