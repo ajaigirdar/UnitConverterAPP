@@ -10,7 +10,9 @@ public class MenuController {
         boolean keepRunning = true;
 
         while (keepRunning) {
-            System.out.println("-[ Welcome to Unit Converter App ]-");
+            System.out.println("+----------------------------------+");
+            System.out.println("| Welcome to Unit Converter App ⚖\uFE0F |");
+            System.out.println("+----------------------------------+");
             System.out.println("-- Choose a conversion category --");
             System.out.println("1 - Length");
             System.out.println("2 - Temperature");
@@ -30,7 +32,6 @@ public class MenuController {
                 case 2:
                     break;
                 case 3:
-
                     break;
                 case 4:
                     break;
@@ -51,8 +52,8 @@ public class MenuController {
             try {
                 return scanner.nextInt();
             } catch (Exception e) {
-                System.out.print("Invalid input. Please enter a valid integer: ");
-                scanner.next(); // Clear the invalid input
+                System.out.print("Invalid input. Please enter a valid number: ");
+                scanner.next();
             }
         }
     }
@@ -63,7 +64,7 @@ public class MenuController {
                 return scanner.nextDouble();
             } catch (Exception e) {
                 System.out.print("Invalid input. Please enter a valid number: ");
-                scanner.next(); // Clear the invalid input
+                scanner.next();
             }
         }
     }

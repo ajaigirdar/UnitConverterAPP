@@ -1,16 +1,18 @@
 package model;
+
 import java.util.Scanner;
+
 import static controller.MenuController.getValidDouble;
 import static controller.MenuController.getValidInt;
 
 public class LengthUnit extends Unit {
     @Override
     public void convert(Scanner scanner) {
-        System.out.println("-- Length Conversion Menu --");
-        System.out.println("1 - Kilometers to Meters");
-        System.out.println("2 - Meters to Kilometers");
-        System.out.println("3 - Inches to Feet");
-        System.out.println("4 - Feet to Inches");
+        System.out.println("\nLength Conversion:");
+        System.out.println("1. Kilometers to Meters");
+        System.out.println("2. Meters to Kilometers");
+        System.out.println("3. Inches to Feet");
+        System.out.println("4. Feet to Inches");
         System.out.print("Choose an option: ");
 
         int option = getValidInt(scanner);
