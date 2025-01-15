@@ -1,6 +1,6 @@
 import controller.MenuController;
 
-public class UnitConverter {
+public class App {
     public static MenuController menuController = new MenuController();
 
     public static void main(String[] args) {
