@@ -1,4 +1,6 @@
 package model;
+import model.enums.LengthConversionOption;
+
 import java.util.Scanner;
 import static controller.MenuController.getValidDouble;
 import static controller.MenuController.getValidInt;
