@@ -1,10 +1,8 @@
 package model;
-
 import controller.MenuController;
-
 import java.util.Scanner;
-
 import static controller.MenuController.getValidDouble;
+
 
 public class WeightUnit extends Unit{
 
@@ -16,6 +14,7 @@ public class WeightUnit extends Unit{
         System.out.println("3. Pounds to Ounces");
         System.out.println("4. Ounces to Pounds");
         System.out.print("Choose an option: ");
+
         int option = MenuController.getValidInt(scanner);
         System.out.println("Enter the value to convert: ");
         double value = getValidDouble(scanner);

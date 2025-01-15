@@ -1,7 +1,6 @@
 package controller;
 
 import model.*;
-
 import java.util.Scanner;
 
 public class MenuController {
@@ -10,10 +9,10 @@ public class MenuController {
         boolean keepRunning = true;
 
         while (keepRunning) {
-            System.out.println("+----------------------------------+");
-            System.out.println("| Welcome to Unit Converter App ⚖\uFE0F |");
-            System.out.println("+----------------------------------+");
-            System.out.println("-- Choose a conversion category --");
+            System.out.println("----------------------------------");
+            System.out.println(" Welcome to Unit Converter App ⚖\uFE0F");
+            System.out.println("----------------------------------");
+            System.out.println("[ Choose a conversion category ]");
             System.out.println("1 - Length");
             System.out.println("2 - Temperature");
             System.out.println("3 - Weight");
@@ -30,10 +29,16 @@ public class MenuController {
                     unit.convert(scanner);
                     break;
                 case 2:
+                    unit = new TemperatureUnit();
+                    unit.convert(scanner);
                     break;
                 case 3:
+                    unit = new WeightUnit();
+                    unit.convert(scanner);
                     break;
                 case 4:
+                    unit = new AreaUnit();
+                    unit.convert(scanner);
                     break;
                 case 5:
                     keepRunning = false;
