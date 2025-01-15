@@ -1,7 +1,7 @@
-# UnitConverterAPP
+# UnitConverterAPP  ⚖️
 
 ## Overview
-The Unit Converter App is a simple Java application that allows users to convert between different units of measurement, including length, temperature, weight, and area.
+The Unit Converter UnitConverter is a simple Java application that allows users to convert between different units of measurement, including length, temperature, weight, and area.
 
 ## Features
 - Convert between various units of length, temperature, weight, and area
