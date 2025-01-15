@@ -26,6 +26,13 @@ public class TemperatureUnit extends Unit{
         }
     }
 
+    private TemperatureType type;
+
+    public TemperatureUnit(TemperatureType type, double value) {
+        super(value);
+        this.type = type;
+    }
+
 
 
     @Override

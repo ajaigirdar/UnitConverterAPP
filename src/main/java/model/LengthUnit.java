@@ -30,7 +30,7 @@ public class LengthUnit extends Unit{
                     return type;
                 }
             }
-            throw new IllegalArgumentException("Unsupported length Type");
+            throw new IllegalArgumentException("Unsupported length unit: " + name);
         }
     }
 
