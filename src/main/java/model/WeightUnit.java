@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class WeightUnit extends Unit{
 
     @Override
-    void convert(Scanner scanner) {
+    public void convert(Scanner scanner) {
 
     }
 }
