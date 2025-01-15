@@ -1,47 +1,39 @@
 package model;
 
-public class LengthUnit extends Unit{
+import java.util.Scanner;
 
-    public enum LengthType {
-        KILOMETERS("Kilometer", 1000),
-        METERS("Meters", 1),
-        INCHES("Inches", 39.37),
-        FEET("Feet", 3.281);
+import static controller.MenuController.getValidDouble;
+import static controller.MenuController.getValidInt;
 
-        private final String name;
-        private final double conversionFactor;
-
-        LengthType(String name, double conversionFactor){
-            this.name = name;
-            this.conversionFactor = conversionFactor;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public double getConversionFactor() {
-            return conversionFactor;
-        }
-
-        public static LengthType fromString(String name) {
-            for (LengthType type : LengthType.values()) {
-                if (type.name.equalsIgnoreCase(name)) {
-                    return type;
-                }
-            }
-            throw new IllegalArgumentException("Unsupported length unit: " + name);
-        }
-    }
-
-    private LengthType type;
-    public LengthUnit(LengthType type, double value) {
-        super(value);
-        this.type = type;
-    }
-
+public class LengthUnit extends Unit {
     @Override
-    public double convertTo(Unit targetUnit) {
-        return 0;
+    void convert(Scanner scanner) {
+        System.out.println("\nLength Conversion:");
+        System.out.println("1. Kilometers to Meters");
+        System.out.println("2. Meters to Kilometers");
+        System.out.println("3. Inches to Feet");
+        System.out.println("4. Feet to Inches");
+        System.out.print("Choose an option: ");
+
+        int option = getValidInt(scanner);
+        System.out.print("Enter the value to convert: ");
+        double value = getValidDouble(scanner);
+
+        switch (option) {
+            case 1:
+                System.out.println(value + " kilometers is " + (value * 1000) + " meters.\n");
+                break;
+            case 2:
+                System.out.println(value + " meters is " + (value / 1000) + " kilometers.\n");
+                break;
+            case 3:
+                System.out.println(value + " inches is " + (value / 12) + " feet.\n");
+                break;
+            case 4:
+                System.out.println(value + " feet is " + (value * 12) + " inches.\n");
+                break;
+            default:
+                System.out.println("Invalid option.\n");
+        }
     }
 }

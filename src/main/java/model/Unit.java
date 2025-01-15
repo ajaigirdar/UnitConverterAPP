@@ -1,16 +1,7 @@
 package model;
 
+import java.util.Scanner;
+
 public abstract class Unit {
-    private double value;
-
-    public Unit(double value){
-        this.value = value;
-    }
-
-    public double getValue(){
-        return value;
-    }
-
-    public abstract double convertTo(Unit targetUnit);
-
+    public abstract void convert(Scanner scanner);
 }

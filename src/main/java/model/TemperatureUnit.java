@@ -1,42 +1,11 @@
 package model;
 
-public class TemperatureUnit extends Unit{
+import java.util.Scanner;
 
-    public enum TemperatureType {
-        CELSIUS("Celsius"),
-        FAHRENHEIT("Fahrenheit"),
-        KELVIN("Kelvin");
-
-        private final String name;
-
-        TemperatureType(String name) {
-            this.name = name;
-        }
-        public String getName() {
-            return name;
-        }
-
-        public static TemperatureType fromString(String name) {
-            for (TemperatureType type : TemperatureType.values()) {
-                if (type.name.equalsIgnoreCase(name)) {
-                    return type;
-                }
-            }
-            throw new IllegalArgumentException("Unsupported temperature unit: " + name.toUpperCase());
-        }
-    }
-
-    private TemperatureType type;
-
-    public TemperatureUnit(TemperatureType type, double value) {
-        super(value);
-        this.type = type;
-    }
-
-
+public class TemperatureUnit extends Unit {
 
     @Override
-    public double convertTo(Unit targetUnit) {
-        return 0;
+    void convert(Scanner scanner) {
+
     }
 }
