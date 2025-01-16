@@ -20,20 +20,11 @@ public class LengthUnit extends Unit {
         LengthConversionOption selectedOption = LengthConversionOption.values()[option];
 
         switch (selectedOption) {
-            case KILOMETERS_TO_METERS:
-                System.out.println(value + " kilometers is " + (value * 1000) + " meters.\n");
-                break;
-            case METERS_TO_KILOMETERS:
-                System.out.println(value + " meters is " + (value / 1000) + " kilometers.\n");
-                break;
-            case INCHES_TO_FEET:
-                System.out.println(value + " inches is " + (value / 12) + " feet.\n");
-                break;
-            case FEET_TO_INCHES:
-                System.out.println(value + " feet is " + (value * 12) + " inches.\n");
-                break;
-            default:
-                System.out.println("Invalid option.\n");
+            case KILOMETERS_TO_METERS -> System.out.println(value + " kilometers is " + (value * 1000) + " meters.\n");
+            case METERS_TO_KILOMETERS -> System.out.println(value + " meters is " + (value / 1000) + " kilometers.\n");
+            case INCHES_TO_FEET -> System.out.println(value + " inches is " + (value / 12) + " feet.\n");
+            case FEET_TO_INCHES -> System.out.println(value + " feet is " + (value * 12) + " inches.\n");
+            default -> System.out.println("Invalid option.\n");
         }
     }
 }
